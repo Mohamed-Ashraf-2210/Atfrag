@@ -16,6 +16,7 @@ import com.example.moviesapp.databinding.FragmentSigupBinding
 import com.example.moviesapp.remote.EndPoints
 import com.example.moviesapp.remote.RetrofitBuilder
 import com.example.moviesapp.request.SignupRequest
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -23,6 +24,8 @@ import java.io.IOException
 class SigupFragment : Fragment() {
     private lateinit var binding: FragmentSigupBinding
     private lateinit var sharedpreferences: SharedPreferences
+    private lateinit var bottomNavigationView : BottomNavigationView
+    private lateinit var topNavView: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,10 +37,9 @@ class SigupFragment : Fragment() {
     }
 
     private fun initviews() {
-        sharedpreferences = requireActivity().getSharedPreferences(
-            "mySharedpref",
-            Context.MODE_PRIVATE
-        )
+        topNavView = requireActivity().findViewById(R.id.top_bar)
+        bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.bot_bar)
+        sharedpreferences = requireActivity().getSharedPreferences("mySharedpref",Context.MODE_PRIVATE)
         if (sharedpreferences.getString("signupStatus","") == "signedup") {
             findNavController().popBackStack()
             findNavController().navigate(R.id.nav_to_home)
@@ -87,5 +89,16 @@ class SigupFragment : Fragment() {
                 Log.i("exception",e.message.toString())
             }
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        topNavView.visibility = View.GONE
+        bottomNavigationView.visibility = View.GONE
+    }
+
+    override fun onStop() {
+        super.onStop()
+        topNavView.visibility = View.VISIBLE
+        bottomNavigationView.visibility = View.VISIBLE
     }
 }

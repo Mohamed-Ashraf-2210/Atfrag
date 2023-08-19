@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import com.example.moviesapp.MainActivity
 import com.example.moviesapp.adapter.CategoryAdapter
 import com.example.moviesapp.databinding.FragmentCategoryBinding
 import com.example.moviesapp.remote.EndPoints
@@ -29,6 +30,7 @@ class CategoryFragment : Fragment() {
     }
 
     private fun initViews() {
+        (requireActivity() as MainActivity).toolbarTextView.text = "Category"
         binding.progressBar.visibility = View.VISIBLE
         getCategories()
     }

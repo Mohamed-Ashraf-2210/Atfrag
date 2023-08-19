@@ -124,7 +124,8 @@
         android:layout_marginTop="620dp"
         android:gravity="center"
         android:text="Already have an account"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/login"

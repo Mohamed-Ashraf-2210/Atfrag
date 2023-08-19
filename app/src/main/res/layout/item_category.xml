@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="20dp"
     android:clickable="true"
-    android:background="?android:attr/selectableItemBackground"
+    android:background="@color/white"
     app:cardElevation="4dp"
     android:layout_margin="12dp"
     >

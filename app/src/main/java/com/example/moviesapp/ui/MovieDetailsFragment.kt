@@ -34,7 +34,7 @@ class MovieDetailsFragment : Fragment() {
     }
 
     private fun intiView() {
-        (requireActivity() as MainActivity).toolbar.toolbarTitle.text = ""
+        (requireActivity() as MainActivity).toolbarTextView.text = "Movies"
         args.movieDetails?.let {
             getMovieById(it)
         }
