@@ -30,7 +30,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun initView() {
-        (requireActivity() as MainActivity).toolbar.toolbarTitle.text = "Home"
+
+        (requireActivity() as MainActivity).toolbarTextView.text = "Home"
         binding.progressBar.visibility = View.VISIBLE
         getMovies()
     }
