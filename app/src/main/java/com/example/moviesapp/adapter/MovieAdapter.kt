@@ -13,7 +13,7 @@ import com.example.moviesapp.model.Movies
 import com.example.moviesapp.ui.HomeFragmentDirections
 import com.example.moviesapp.ui.MovieDetailsFragment
 
-class MovieAdapter(val listOfMovie : List<Movies>,val context : Context) : RecyclerView.Adapter<MovieViewHolder>(){
+class MovieAdapter(private val listOfMovie : List<Movies>, val context : Context) : RecyclerView.Adapter<MovieViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val itemBinding = ItemMovieBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return MovieViewHolder(itemBinding)

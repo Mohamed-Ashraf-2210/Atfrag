@@ -1,5 +1,4 @@
 package com.example.moviesapp.ui
-import android.graphics.Movie
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater

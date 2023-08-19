@@ -1,7 +1,21 @@
 <resources>
-    <string name="app_name">MoviesApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">moviesapp</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_in_fragment2">hello in fragment2</string>
     <string name="home">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="login">login</string>
+    <string name="email">e_mail</string>
+    <string name="password">Password</string>
+    <string name="google"> Log in  by Google</string>
+    <string name="facebook"> Log in by Facebook</string>
+    <string name="or_login_by">or login by</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="enter_your_e_mail_or_your_phone">Enter your e-mail or your phone</string>
+    <string name="pic_of_our_website">pic of our website</string>
+    <string name="donthaveaccounnt">You do not have account?</string>
+    <string name="sign_up">sign up</string>
     <string name="category">Category</string>
+    <string name="profile">Profile</string>
 </resources>

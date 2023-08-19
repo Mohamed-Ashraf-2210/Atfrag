@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.example.moviesapp.MainActivity
 import com.example.moviesapp.databinding.FragmentMovieDetailsBinding
 import com.example.moviesapp.model.Movies
 import com.example.moviesapp.remote.EndPoints
@@ -33,6 +34,7 @@ class MovieDetailsFragment : Fragment() {
     }
 
     private fun intiView() {
+        (requireActivity() as MainActivity).toolbar.toolbarTitle.text = ""
         args.movieDetails?.let {
             getMovieById(it)
         }
@@ -51,7 +53,7 @@ class MovieDetailsFragment : Fragment() {
                     }
                     404 -> {
                         Toast.makeText(requireContext(),response.errorBody()?.string(),Toast.LENGTH_SHORT).show()
-                   }
+                    }
 
                 }
             }
@@ -70,39 +72,8 @@ class MovieDetailsFragment : Fragment() {
         binding.numberOfWatch.text = movieDetail?.numberOfWatch.toString()
         binding.movieDes.text = movieDetail?.description
         binding.movieAuthor.text = movieDetail?.author
+        binding.stars.text = movieDetail?.rating.toString()
     }
 
-
-//    private fun intiView() {
-//        val movieId = args.movieDetails
-//        movieId?.let {
-//            getMovieById(it)
-//        }
-//
-//    }
-//
-//    private fun getMovieById(movieId: String) {
-//        try {
-//            lifecycleScope.launch {
-//                val api = RetrofitBuilder.retrofit.create(EndPoints::class.java)
-//                val respons = api.getMovieById(movieId)
-//                when(respons.code()){
-//                    200 -> {
-//                        val listOfMovies = respons.body()
-//                        listOfMovies?.let {
-//                            intiMovieAdapter(listOfMovies)
-//                        }
-//                    }
-//                }
-//            }
-//        }catch (e :IOException){
-//            Log.i("exception",e.message.toString())
-//        }
-//    }
-//
-//    private fun intiMovieAdapter(listOfMovies: List<Movies>) {
-//        val movieAdapter = MovieAdapter(listOfMovies,requireContext())
-//    }
-//
 
 }

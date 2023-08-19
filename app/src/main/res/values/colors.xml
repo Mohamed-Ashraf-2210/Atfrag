@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="light_blue">#0077b6</color>
-    <color name="my_light_primary">#FFFFFFFF</color>
-    <color name="my_dark_primary">#FF000000</color>
-    <color name="app_color">#A61616</color>
-    <color name="stars">#E7C825</color>
+    <color name="purple_200">#BD89FD</color>
+    <color name="purple_500">#6401F3</color>
+    <color name="purple_700">#3700B5</color>
+    <color name="teal_200">#03DCC6</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_orange">#FFC17F</color>
+    <color name="blue">#00549A</color>
+    <color name="red">#BF092D</color>
+    <color name="dark_orange">#FF8E00</color>
+    <color name="ligth_gray">#D3D3D3</color>
+    <color name="colorPrimary">#141A31</color>
+    <color name="colorPrimaryDark">#081029</color>
+    <color name="colorPAccent">#0097FB</color>
+    <color name="colorPTextIcons">#141A31</color>
+    <color name="colorPrimaryLight">#CBD5ED</color>
+    <color name="colorTextPrimary">#4A5B82</color>
+    <color name="colorTextOther">#5AD303</color>
+    <color name="colorPThemeExtra">#FF5252</color>
+    <color name="babyblue">#dce3ff</color>
+    <color name="teal700">#028786</color>
+    <color name="yellow">#E7C825</color>
 </resources>
